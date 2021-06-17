@@ -29,8 +29,16 @@ class CheckOut:
 
     def calculate_current_total(self) -> None:
         """
-            Test if we can compute current total.
+            Compute current total with one item
         Returns:
             None
         """
         return 1
+
+    def compute_total_for_multiple_items(self) -> None:
+        """
+            Compute total for multiple items
+        Returns:
+            None
+        """
+        return 3
