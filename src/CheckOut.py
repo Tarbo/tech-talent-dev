@@ -4,7 +4,9 @@
 
 
 class CheckOut:
-    pass
+    def __init__(self):
+        self.prices={}
+        self.total = 0
 
     def add_item_price(self, item: str, price: float) -> None:
         """
@@ -15,7 +17,7 @@ class CheckOut:
         Returns:
             None
         """
-        pass
+        self.prices[item]=price
 
     def add_item(self, item: str) -> None:
         """
@@ -25,20 +27,12 @@ class CheckOut:
         Returns:
             None
         """
-        pass
+        self.total+=self.prices[item]
 
-    def calculate_current_total(self) -> None:
-        """
-            Compute current total with one item
-        Returns:
-            None
-        """
-        return 1
-
-    def compute_total_for_multiple_items(self) -> None:
+    def compute_total(self) -> None:
         """
             Compute total for multiple items
         Returns:
             None
         """
-        return 3
+        return self.total
