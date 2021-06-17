@@ -11,24 +11,6 @@ def checkout() -> object:
     return checkout
 
 
-def test_can_add_item_price(checkout) -> None:
-    """
-        Test case for can add item price.
-    Returns:
-        None
-    """
-    checkout.add_item_price("item", 56)
-
-
-def test_add_item(checkout) -> None:
-    """
-        Test add item method.
-    Returns:
-        None
-    """
-    checkout.add_item("item")
-
-
 def test_calculate_current_total(checkout) -> None:
     """
         Test whether we can calculate current total.
@@ -37,4 +19,6 @@ def test_calculate_current_total(checkout) -> None:
     Returns:
         None
     """
-    checkout.calculate_current_total(35, 23)
+    checkout.add_item_price("item", 56)
+    checkout.add_item("item")
+    assert checkout.calculate_current_total() == 1

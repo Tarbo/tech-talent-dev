@@ -27,13 +27,10 @@ class CheckOut:
         """
         pass
 
-    def calculate_current_total(self, previous_total: float, new_item_price: float) -> None:
+    def calculate_current_total(self) -> None:
         """
             Test if we can compute current total.
-        Args:
-            previous_total (float):
-            new_item_price (float):
         Returns:
             None
         """
-        pass
+        return 1
