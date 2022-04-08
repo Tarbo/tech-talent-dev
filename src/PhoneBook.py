@@ -18,3 +18,14 @@ class PhoneBook:
             None.
         """
         self.contact[name] = number
+
+    def get_contact(self, name: str) -> str:
+        """
+            Fetch the contact given a name.
+        Args:
+            name (str):
+
+        Returns:
+            str
+        """
+        return self.contact[name]
